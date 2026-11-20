@@ -1,66 +1,283 @@
 <!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2026 by anonymous (http://jsbin.com/casiyaraka/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Presentación TP</title>
+  <meta name="description" content="Descripción breve de tu trabajo práctico.">
+  <title>Título de tu trabajo | Visualización de la Información</title>
 
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
-      color: #222;
+    :root {
+      --color-principal: #1f4e79;
+      --color-acento: #2a9d8f;
+      --color-fondo: #ffffff;
+      --color-fondo-suave: #f3f6fa;
+      --color-texto: #222;
+      --color-texto-suave: #666;
+      --ancho: 960px;
     }
-    section { margin-bottom: 48px; }
-    h1, h2 { color: #1f4e79; }
-    p.descripcion { color: #555; }
-  </style>
 
-  
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: var(--color-texto);
+      background: var(--color-fondo);
+    }
+
+    .contenedor {
+      max-width: var(--ancho);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Portada ---------- */
+    header.portada {
+      background: var(--color-fondo-suave);
+      padding: 72px 0 56px;
+    }
+    .etiqueta {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      color: var(--color-acento);
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    header.portada h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 16px;
+      color: var(--color-principal);
+    }
+    header.portada p.bajada {
+      font-size: 1.1rem;
+      color: var(--color-texto-suave);
+      max-width: 720px;
+    }
+    .chips {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chips li {
+      background: #fff;
+      border: 1px solid #d5dde8;
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 0.85rem;
+    }
+
+    /* ---------- Secciones ---------- */
+    section { padding: 56px 0; border-bottom: 1px solid #eceff3; }
+    section h2 {
+      font-size: 1.8rem;
+      margin: 0 0 16px;
+      color: var(--color-principal);
+    }
+    section h3 { margin: 32px 0 8px; font-size: 1.15rem; }
+
+    /* Tarjetas de datos clave */
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .tarjeta {
+      background: var(--color-fondo-suave);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .tarjeta strong { display: block; font-size: 1.6rem; color: var(--color-principal); }
+    .tarjeta span { font-size: 0.9rem; color: var(--color-texto-suave); }
+
+    /* Gráficos */
+    figure { margin: 24px 0; }
+    figure img { max-width: 100%; height: auto; display: block; }
+    figcaption, .fuente {
+      font-size: 0.85rem;
+      color: var(--color-texto-suave);
+      margin-top: 8px;
+    }
+    .embed {
+      width: 100%;
+      height: 520px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--color-fondo-suave);
+    }
+
+    /* Caja "lectura del gráfico" */
+    .lectura {
+      background: var(--color-fondo-suave);
+      border-left: 4px solid var(--color-acento);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 24px;
+    }
+    .lectura h3 { margin-top: 0; }
+
+    footer {
+      padding: 32px 0;
+      font-size: 0.85rem;
+      color: var(--color-texto-suave);
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Presentación TP</h1>
 
-
-  
-<!-- Gráfico 1: Flourish -->
-
-<section>
-
-<h2>Título del primer gráfico</h2>
-    
-<p class="descripcion">Explicación breve de qué muestra el gráfico.</p>
-
-<div class="flourish-embed flourish-chart" data-src="visualisation/30757322">
-
-<script src="https://public.flourish.studio/resources/embed.js"> </script>
-      
-<noscript> <img src="https://public.flourish.studio/visualisation/30757322/thumbnail"width="100%" alt="Descripción del gráfico de Flourish"> </noscript>
-    
-</div>  
-</section>
-
-  
-  
-  
-  
-  
-  <!-- Gráfico 2: Datawrapper -->
-  <section>
-    <h2>Qué prefieren los hombres y las mujeres como agregado en su pizza</h2>
-    <p class="descripcion">Explicación breve de qué muestra el gráfico.</p>
-
-    <div style="min-height:454px" id="datawrapper-vis-osejZ">
-      <script type="text/javascript" defer
-              src="https://datawrapper.dwcdn.net/osejZ/embed.js"
-              charset="utf-8"
-              data-target="#datawrapper-vis-osejZ"></script>
-      <noscript>
-        <img src="https://datawrapper.dwcdn.net/osejZ/full.png"
-             alt="Qué prefieren los hombres y las mujeres como agregado en su pizza (Range Plot)">
-      </noscript>
+  <!-- ================= PORTADA ================= -->
+  <header class="portada">
+    <div class="contenedor">
+      <p class="etiqueta">Visualización de la Información</p>
+      <h1>Caracterización del Consumo de YouTube </h1>
+      <p class="bajada">
+        Objetivo: Caracterizar cuali y cuantitativamente el consumo de YouTube. Elaborar conclusiones.
+        Alcance: Se estudiará el historial de reproducciones de YouTube de Enero a Octubre 2026 sin YouTubeMusic.
+        Metodología: Se extraen los datos del historial de reproducciones del takeout de Google. Se transforman los datos y se confeccionan 4 visualizaciones con 4 herramientas.
+      </p>
+      <ul class="chips">
+        <li>Dato 1</li>
+        <li>Dato 2</li>
+        <li>Herramienta 1</li>
+        <li>Herramienta 2</li>
+      </ul>
     </div>
-  </section>
+  </header>
+
+  <main>
+
+    <!-- ================= 01 · SOBRE EL PROYECTO ================= -->
+    <section id="proyecto">
+      <div class="contenedor">
+        <p class="etiqueta">01 / Resumen</p>
+        <h2>Principales Características del Consumo de YouTube</h2>
+        <p>
+          Principales Indicadores
+        </p>
+        <div class="tarjetas">
+          <div class="tarjeta"><strong>4 Canales</strong><span>80% del Consumo</span></div>
+          <div class="tarjeta"><strong>16 Minutos</strong><span>Mediana del Consumo</span></div>
+          <div class="tarjeta"><strong>00</strong><span>Dato clave 3</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 · GRÁFICO COMO IMAGEN (SVG/PNG) ================= -->
+    <section id="grafico-1">
+      <div class="contenedor">
+        <p class="etiqueta">02 / Herramienta · Tipo de gráfico</p>
+        <h2>Pregunta que responde el primer gráfico</h2>
+        <p>Explicá cómo leer el gráfico (qué significan áreas, colores, ejes).</p>
+
+        <figure>
+          <!-- Cambiá por tu archivo exportado -->
+          <img src="assets/grafico1.svg" alt="Descripción del gráfico para accesibilidad">
+          <figcaption>Fuente: ... Herramienta: ...</figcaption>
+        </figure>
+
+        <div class="lectura">
+          <h3>Lectura del gráfico</h3>
+          <p>Qué conclusión se ve a simple vista.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 · FLOURISH ================= -->
+    <section id="grafico-2">
+      <div class="contenedor">
+        <p class="etiqueta">03 / Flourish · Gráfico de líneas</p>
+        <h2>Pregunta que responde el segundo gráfico</h2>
+        <p>Explicá qué representa cada serie y cada punto.</p>
+
+        <!-- En Flourish: Share → Embed → copiá la URL del iframe -->
+        <iframe class="embed"
+                src="https://flo.uri.sh/visualisation/XXXXXXXX/embed"
+                title="Gráfico de Flourish"
+                loading="lazy" scrolling="no"></iframe>
+
+        <p class="fuente">Nota metodológica o fuente.</p>
+      </div>
+    </section>
+
+    <!-- ================= 04 · DATAWRAPPER ================= -->
+    <section id="grafico-3">
+      <div class="contenedor">
+        <p class="etiqueta">04 / Datawrapper · Distribución</p>
+        <h2>Pregunta que responde el tercer gráfico</h2>
+        <p>Explicá cómo se agruparon los datos.</p>
+
+        <!-- En Datawrapper: Publish & Embed → copiá la URL "Link to visualization" -->
+        <iframe class="embed"
+                src="https://datawrapper.dwcdn.net/XXXXX/1/"
+                title="Gráfico de Datawrapper"
+                loading="lazy" scrolling="no"></iframe>
+
+        <p class="fuente">Fuente: ... Herramienta: Datawrapper.</p>
+
+        <div class="lectura">
+          <h3>Lectura del gráfico</h3>
+          <p>Qué conclusión se desprende, con números concretos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 · TABLEAU (enlace) ================= -->
+    <section id="grafico-4">
+      <div class="contenedor">
+        <p class="etiqueta">05 / Tableau · Heatmap</p>
+        <h2>Pregunta que responde el cuarto gráfico</h2>
+        <p>Explicá qué muestra el color y cómo usar los filtros.</p>
+
+        <!-- Tableau Public: si el embed no carga, dejá un enlace -->
+        <p><a href="https://public.tableau.com/views/XXXXXXX" target="_blank" rel="noopener">
+          Ver el gráfico interactivo en Tableau Public
+        </a></p>
+
+        <p class="fuente">Fuente: ... Herramienta: Tableau Public.</p>
+      </div>
+    </section>
+
+    <!-- ================= 06 · HALLAZGOS ================= -->
+    <section id="hallazgos">
+      <div class="contenedor">
+        <p class="etiqueta">06 / Hallazgos y limitaciones</p>
+        <h2>¿Qué nos muestran los datos?</h2>
+        <ul>
+          <li><strong>Hallazgo 1:</strong> descripción.</li>
+          <li><strong>Hallazgo 2:</strong> descripción.</li>
+          <li><strong>Hallazgo 3:</strong> descripción.</li>
+        </ul>
+
+        <h3>Cómo interpretar los resultados</h3>
+        <p>Limitaciones del análisis, supuestos y aclaraciones sobre los datos.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      Trabajo práctico de Visualización de la Información · Herramientas: ...
+    </div>
+  </footer>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"480c9d8468c44ad3bed3c74fbcc6d6f3","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
