@@ -134,48 +134,47 @@
 <body>
 
   <!-- ================= PORTADA ================= -->
+  
   <header class="portada">
     <div class="contenedor">
       <p class="etiqueta">Visualización de la Información</p>
-      <h1>Caracterización del Consumo de YouTube </h1>
+      <h1>Estudio del Consumo de YouTube </h1>
       <p class="bajada">
-        Objetivo: Caracterizar cuali y cuantitativamente el consumo de YouTube. Elaborar conclusiones.
+        Objetivo: Caracterizar cuali y cuantitativamente el consumo de YouTube.
         Alcance: Se estudiará el historial de reproducciones de YouTube de Enero a Octubre 2026 sin YouTubeMusic.
         Metodología: Se extraen los datos del historial de reproducciones del takeout de Google. Se transforman los datos y se confeccionan 4 visualizaciones con 4 herramientas.
       </p>
+      
       <ul class="chips">
-        <li>Dato 1</li>
-        <li>Dato 2</li>
-        <li>Herramienta 1</li>
-        <li>Herramienta 2</li>
+    
       </ul>
     </div>
   </header>
 
   <main>
 
-    <!-- ================= 01 · SOBRE EL PROYECTO ================= -->
+    <!-- ================= 00 · INTRODUCCIÓN ================= -->
     <section id="proyecto">
       <div class="contenedor">
-        <p class="etiqueta">01 / Introducción</p>
+        <p class="etiqueta">00 / Introducción</p>
         <h2>Principales Características</h2>
         <p>
           Resumen de las Principales Características del Consumo de YouTube
         </p>
         <div class="tarjetas">
-          <div class="tarjeta"><strong>4 Canales</strong><span>Concentran +80% del Consumo</span></div>
-          <div class="tarjeta"><strong>2 Categorías</strong><span>Representan +80% del Consumo</span></div>
-          <div class="tarjeta"><strong>16 Minutos</strong><span>Mediana del Consumo</span></div>
+          <div class="tarjeta"><strong>5 Canales</strong><span>+80% de las Visitas</span></div>
+          <div class="tarjeta"><strong>2 Categorías de Canal</strong><span>+80% de las Visitas</span></div>
+          
         </div>
       </div>
     </section>
 
-    <!-- ================= 02 · RAW.GRAPH ================= -->
+    <!-- ================= 01 · VISUALIZACIÓN 1 ================= -->
     <section id="grafico-1">
       <div class="contenedor">
-        <p class="etiqueta">02 / Visualización TreeMap de RawGraphs</p>
-        <h2>Categorías de los Canales Consumidos</h2>
-        <p>Distribución del Consumo x Categoría del Canal</p>
+        <p class="etiqueta">01 /RawGraphs:TreeMap</p>
+        <h2>Categorías de los Canales Visitados</h2>
+        <p>N° de Visitas x Categoría de Canal (%)</p>
 
         <figure>
           <!-- AGREGAR DEBAJO LINKS A LOS GRAFICOS -->
@@ -191,18 +190,20 @@
       </div>
     </section>
 
-    <!-- ================= 03 · DATA.W.RAPPER ================= -->
+    
+    
+    <!-- ================= 02 · VISUALIZACIÓN 2 ================= -->
     <section id="grafico-2">
       <div class="contenedor">
-        <p class="etiqueta">03 / Visualización StackedBar de DataWrapper</p>
-        <h2>Canales consumidos</h2>
-        <p>Distribución del Consumo x Canal</p>
+        <p class="etiqueta">02 / FLOURISH: STACKED BARS </p>
+        <h2>Canales Visitados</h2>
+        <p>N°de Visitas x Canal: Frecuencia Relativa (%)</p>
 
-        <!-- AGREGAR LINK ABAJO -->
+        <!-- PEGAR LINK DEBAJO DE ESTE TEXTO -->
  
-        <div style="min-height:306px" id="datawrapper-vis-1krUz"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/1krUz/embed.js" charset="utf-8" data-target="#datawrapper-vis-1krUz"></script><noscript><img src="https://datawrapper.dwcdn.net/1krUz/full.png" alt="N° de Reproducciones (Stacked Bars)" /></noscript></div>
+      
        
-        
+      <div class="flourish-embed flourish-chart" data-src="visualisation/30987291"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30987291/thumbnail" width="100%" alt="chart visualization" /></noscript></div><div class="flourish-fallback" data-for="visualisation/30987291"><a href="https://public.flourish.studio/visualisation/30987291/visualisation.json?ref=embed-script">https://public.flourish.studio/visualisation/30987291/visualisation.json?ref=embed-script</a></div>
         
       </div>
     </section>
@@ -212,38 +213,40 @@
     
     
     
-    <!-- ================= 04 · DATAWRAPPER ================= -->
+    <!-- ================= 03 · VISUALIZACIÓN 3 ================= -->
     <section id="grafico-3">
       <div class="contenedor">
-        <p class="etiqueta">04 / Datawrapper · Distribución</p>
-        <h2></h2>
-        <p></p>
+        <p class="etiqueta">03 /DATAWRAPPER: BUBBLE CHART (SCATTER PLOT)</p>
+        <h2>N° Visitas vs Tiempo Consumido</h2>
+        <p>Relación entre N°Visitas de un Canal y el Tiempo Consumido en un Canal </p>
 
-        <!-- En Datawrapper: Publish & Embed → copiá la URL "Link to visualization" -->
+        <!--PASTE LINK BELOW -->
        
-         
           
-          <h3>Lectura del gráfico</h3>
-          <p>Qué conclusión se desprende, con números concretos.</p>
+        <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-dskS9" src="https://datawrapper.dwcdn.net/dskS9/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="401" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+          <h3></h3>
+          <p></p>
        
         
         </div>
       </div>
     </section>
 
-    <!-- ================= 05 · TABLEAU (enlace) ================= -->
+  
+  
+    <!-- ================= 04 · VISUALIZACIÓN 4  ================= -->
     <section id="grafico-4">
       <div class="contenedor">
-        <p class="etiqueta">05 / Tableau · Heatmap</p>
-        <h2>Pregunta que responde el cuarto gráfico</h2>
-        <p>Explicá qué muestra el color y cómo usar los filtros.</p>
+        <p class="etiqueta">04 / Tableau:Histograma</p>
+        <h2>Duración AVG de los Videos</h2>
+        <p></p>
 
-        <!-- Tableau Public: si el embed no carga, dejá un enlace -->
-        <p><a href="https://public.tableau.com/views/XXXXXXX" target="_blank" rel="noopener">
-          Ver el gráfico interactivo en Tableau Public
-        </a></p>
-
-        <p class="fuente">Fuente: ... Herramienta: Tableau Public.</p>
+        <!-- LINK TABLEAU -->
+       
+        <div class='tableauPlaceholder' id='viz1795191008925' style='position: relative'><noscript><a href='#'><img alt='Hoja 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hi&#47;Historia_YT_2026v3&#47;Hoja1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Historia_YT_2026v3&#47;Hoja1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hi&#47;Historia_YT_2026v3&#47;Hoja1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1795191008925');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        
+        
+       
       </div>
     </section>
 
@@ -251,33 +254,9 @@
   
   
   
+ 
+
   
   
-  
-  
-    <!-- ================= 06 · HALLAZGOS ================= -->
-    <section id="hallazgos">
-      <div class="contenedor">
-        <p class="etiqueta">06 / Hallazgos y limitaciones</p>
-        <h2>¿Qué nos muestran los datos?</h2>
-        <ul>
-          <li><strong>Hallazgo 1:</strong> descripción.</li>
-          <li><strong>Hallazgo 2:</strong> descripción.</li>
-          <li><strong>Hallazgo 3:</strong> descripción.</li>
-        </ul>
-
-        <h3>Cómo interpretar los resultados</h3>
-        <p>Limitaciones del análisis, supuestos y aclaraciones sobre los datos.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="contenedor">
-      Trabajo práctico de Visualización de la Información · Herramientas: ...
-    </div>
-  </footer>
-
 </body>
 </html>
